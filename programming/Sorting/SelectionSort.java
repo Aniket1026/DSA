@@ -2,7 +2,7 @@ package programming.Sorting;
 
 import java.util.Arrays;
 /*
-In selection sort after every pass we find the current largest or smallest element in the array
+Approach : In selection sort after every pass we find the current largest or smallest element in the array
 and then put it at it's correct index depending upon if it's the largest or the smallest from the
 available elements.After every pass we wouldn't include the elements that has been already sorted.
 This way we have to iterate n-1 times to find the desired element and then swap it with the index
