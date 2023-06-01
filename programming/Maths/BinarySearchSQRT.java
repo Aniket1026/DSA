@@ -1,0 +1,41 @@
+package programming.Maths;
+
+/*
+Find the square root of a number using the binary search
+ */
+public class BinarySearchSQRT {
+	public static void main(String[] args) {
+		int n = 132;
+		int p=3;
+		double sqrt = binarySearchSqrt(n,p);
+		System.out.printf("%.3f",sqrt);
+	}
+	public static double binarySearchSqrt(int n,int p){
+		int start =0;
+		int end = n;
+
+		double root = 0.0;
+
+		while(start<=end){
+		int mid = start+(end-start)/2;
+		if(mid*mid == n){
+		  return mid;
+		}else if(mid*mid>n){
+			end= mid-1;
+		}else{
+			start = mid+1;
+		     }
+		}
+
+        root = end;
+		double increment = 0.1;
+		for(int i=0;i<p;i++){
+			while(root*root<=n){
+				root+=increment;
+			}
+			root-=increment;
+			increment/=10;
+		}
+		return root;
+	}
+}
