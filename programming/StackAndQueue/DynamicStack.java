@@ -1,2 +1,23 @@
-package programming.StackAndQueue;public class DynamicStack {
+package programming.StackAndQueue;
+
+public class DynamicStack extends CustomStack{
+	public DynamicStack(){
+		super();
+	}
+	public DynamicStack(int size){
+		super(size);
+	}
+	@Override
+	public boolean push(int val){
+		if(this.isFull()){
+          // double the size of the array and copy the elements to the new array
+			int[] temp = new int[data.length * 2];
+			for(int i=0;i<data.length;i++){
+				temp[i]=data[i];
+			}
+			data = temp;
+		}
+		// since stack is not full we can now push normally
+		return super.push(val);
+	}
 }
