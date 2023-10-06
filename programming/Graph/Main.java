@@ -12,5 +12,6 @@ public class Main {
 		graph.addEdge(2, 3);
 		graph.addEdge(3, 4);
 		graph.printGraph();
+		System.out.println(graph.edgeExists(2,4));
 	}
 }
