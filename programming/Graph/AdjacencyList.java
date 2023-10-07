@@ -16,6 +16,10 @@ public class AdjacencyList {
 		adjacencyList.get(source).add(destination);
 		adjacencyList.get(destination).add(source);
 	}
+
+	public void addDirectedEdge(int source, int destination){
+		adjacencyList.get(source).add(destination);
+	}
 	public void printGraph(){
 		for (int i=0;i<vertex;i++){
 			ArrayList<Integer> list = adjacencyList.get(i);

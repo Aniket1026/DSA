@@ -14,6 +14,10 @@ int[][] matrix;
 	   matrix[destination][source] =1;
 	}
 
+	public void addDirectedEdge(int source , int destination){
+	   matrix[source][destination]=1;
+	}
+
 	public void printGraph(){
 
 		for(int i=0;i<vertex;i++){
