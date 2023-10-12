@@ -17,6 +17,10 @@ int[][] matrix;
 	public void addDirectedEdge(int source , int destination){
 	   matrix[source][destination]=1;
 	}
+	public void addWeightedEdge(int source, int destination, int weight){
+	   matrix[source][destination] = weight;
+	   matrix[destination][source] = weight;
+	}
 
 	public void printGraph(){
 
